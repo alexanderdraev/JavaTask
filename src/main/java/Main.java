@@ -45,7 +45,7 @@ public class Main {
                 }
             }
 
-            FileWriter resultWriter = new FileWriter("result.json");
+            FileWriter resultWriter = new FileWriter("result.csv");
             resultWriter.write("Name, Score\n");
 
             for (int i = 0; i < employees.length; i++) {

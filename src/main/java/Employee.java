@@ -1,12 +1,12 @@
 public class Employee {
 
     private String name;
-    private int totalSales;
-    private int salesPeriod;
+    private double totalSales;
+    private double salesPeriod;
     private double experienceMultiplier;
     private double score;
 
-    public Employee(String name, int totalSales, int salesPeriod, double experienceMultiplier) {
+    public Employee(String name, double totalSales, double salesPeriod, double experienceMultiplier) {
         this.setName(name);
         this.setTotalSales(totalSales);
         this.setSalesPeriod(salesPeriod);
@@ -25,11 +25,11 @@ public class Employee {
         this.name = name;
     }
 
-    public int getTotalSales() {
+    public double getTotalSales() {
         return totalSales;
     }
 
-    public void setTotalSales(int totalSales) {
+    public void setTotalSales(double totalSales) {
         if (totalSales < 0) {
             throw new IllegalArgumentException("Employee total sales must be a positive number.");
         }
@@ -37,14 +37,13 @@ public class Employee {
         this.totalSales = totalSales;
     }
 
-    public int getSalesPeriod() {
+    public double getSalesPeriod() {
         return salesPeriod;
     }
 
-    public void setSalesPeriod(int salesPeriod) {
+    public void setSalesPeriod(double salesPeriod) {
         if (salesPeriod < 0) {
             throw new IllegalArgumentException("Employee sales period must be a positive number.");
-
         }
 
         this.salesPeriod = salesPeriod;
