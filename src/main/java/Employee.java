@@ -44,6 +44,7 @@ public class Employee {
     public void setSalesPeriod(int salesPeriod) {
         if (salesPeriod < 0) {
             throw new IllegalArgumentException("Employee sales period must be a positive number.");
+
         }
 
         this.salesPeriod = salesPeriod;

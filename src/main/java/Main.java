@@ -1,7 +1,9 @@
 import com.google.gson.Gson;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -42,10 +44,22 @@ public class Main {
                     employees[i].setScore(score);
                 }
             }
-            
 
-        } catch (Exception e) {
+            FileWriter resultWriter = new FileWriter("result.json");
+            resultWriter.write("Name, Score\n");
 
+            for (int i = 0; i < employees.length; i++) {
+                if (employees[i].getSalesPeriod() <= report.getPeriodLimit()) {
+                    resultWriter.write(employees[i].getName() + ", " + employees[i].getScore() + "\n");
+                }
+            }
+            resultWriter.close();
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
