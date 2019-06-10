@@ -5,9 +5,9 @@ public class Report {
     private int periodLimit;
 
     public Report(int topPerformersThreshold, boolean useExprienceMultiplier, int periodLimit) {
-        this.topPerformersThreshold = topPerformersThreshold;
-        this.useExprienceMultiplier = useExprienceMultiplier;
-        this.periodLimit = periodLimit;
+        this.setTopPerformersThreshold(topPerformersThreshold);
+        this.setUseExprienceMultiplier(useExprienceMultiplier);
+        this.setPeriodLimit(periodLimit);
     }
 
     public int getTopPerformersThreshold() {

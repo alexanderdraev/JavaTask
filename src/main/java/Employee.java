@@ -7,10 +7,10 @@ public class Employee {
     private double score;
 
     public Employee(String name, int totalSales, int salesPeriod, double experienceMultiplier) {
-        this.name = name;
-        this.totalSales = totalSales;
-        this.salesPeriod = salesPeriod;
-        this.experienceMultiplier = experienceMultiplier;
+        this.setName(name);
+        this.setTotalSales(totalSales);
+        this.setSalesPeriod(salesPeriod);
+        this.setExperienceMultiplier(experienceMultiplier);
     }
 
     public String getName() {
