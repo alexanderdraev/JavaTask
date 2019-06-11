@@ -3,7 +3,7 @@
 "name": "John Smith",
 "totalSales": 250,
 "salesPeriod": 10,
-"experienceMultiplier": 3.5
+"experienceMultiplier": 0.5
 },
 {
 "name": "David Prowless",

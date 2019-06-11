@@ -1,5 +1,4 @@
 import com.google.gson.Gson;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -10,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         try {
+
             Scanner consoleReader = new Scanner(System.in);
             String pathToDataJsonFile = consoleReader.nextLine();
             String pathToReportJsonFile = consoleReader.nextLine();
@@ -40,6 +40,7 @@ public class Main {
                     employees[i].setScore(score);
 
                 } else {
+
                     double score = employees[i].getTotalSales() / employees[i].getSalesPeriod();
                     employees[i].setScore(score);
                 }
@@ -53,8 +54,8 @@ public class Main {
                     resultWriter.write(employees[i].getName() + ", " + employees[i].getScore() + "\n");
                 }
             }
-            resultWriter.close();
 
+            resultWriter.close();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
